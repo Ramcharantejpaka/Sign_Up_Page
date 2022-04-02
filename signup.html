@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signupstyle.css">
+    <title>Registration</title>
+</head>
+<body>
+    <div class="container">
+        <h2 class="signup">Sign Up</h2>
+        <div class="namec">
+            <span class="name"><input type="text" name="name" id="firstname" placeholder="First name" required></span>
+            <span class="name"><input type="text" name="name" id="lastname" placeholder="Last name" required></span>
+        </div>
+        <div><label id="hide">Email address</label> <input type="email" name="" id="email" placeholder="Email address" required></div>
+        <div><label id="hide">Password </label><input type="password" name="" id="password" placeholder="New password" required></div>
+        <!-- <div>Date of birth<input type="date" name="" id="date" required></div> -->
+        <p>Date of birth</p>
+        <div class="dateofbirth">
+            
+            <select class="dob" name="date" id="date"> 
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+            </select>
+            <select class="dob" name="month" id="month">
+                <option value="0">Jan
+                    <option value="1">Feb
+                    <option value="2">Mar
+                    <option value="3">Apr
+                    <option value="4">May
+                    <option value="5">Jun
+                    <option value="6">Jul
+                    <option value="7">Aug
+                    <option value="8">Sep
+                    <option value="9">Oct
+                    <option value="10">Nov
+                    <option value="11">Dec
+            </select>
+            <select class="dob" name="year" id="year"></select>
+            <script>
+                let dateDropdown = document.getElementById('year'); 
+                     
+                let currentYear = new Date().getFullYear();    
+                let earliestYear = 1905;     
+                while (currentYear >= earliestYear) {      
+                  let dateOption = document.createElement('option');          
+                  dateOption.text = currentYear;      
+                  dateOption.value = currentYear;        
+                  dateDropdown.add(dateOption);      
+                  currentYear -= 1;    
+                }
+            </script>
+        </div> 
+        <p>Gender</p>
+        <div class="Gendercont" data-type="radio" id="genderid">
+            <label class="gender" for="male">Male<input type="radio" name="gender" id="male" required></label>
+            <label class="gender" for="female">Female<input type="radio" name="gender" id="female" required></label>
+            <label class="gender" for="other">Other<input type="radio" name="gender" id="other" required></label>
+        </div>
+        <div class="submit" data-type="submit">
+            <input type="submit" name="submit" id="submit">
+        </div>
+    </div>
+</body>
+</html>
