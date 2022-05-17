@@ -4,7 +4,8 @@
 body{
     padding: 20px;
     margin: 20px;
-    background-color: #fff;
+    position: relative ;
+    background: linear-gradient(rgb(18, 118, 185),rgb(24, 142, 165));
     font-family: Arial, sans-serif;
     line-height: 1.4px;
 }
